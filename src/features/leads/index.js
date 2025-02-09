@@ -13,7 +13,7 @@ const TopSideButtons = () => {
     const dispatch = useDispatch()
 
     const openAddNewLeadModal = () => {
-        dispatch(openModal({title : "Add New Lead", bodyType : MODAL_BODY_TYPES.LEAD_ADD_NEW}))
+        dispatch(openModal({title : "Add New User", bodyType : MODAL_BODY_TYPES.LEAD_ADD_NEW}))
     }
 
     return(
@@ -50,7 +50,7 @@ function Leads(){
     return(
         <>
             
-            <TitleCard title="Current Leads" topMargin="mt-2" TopSideButtons={<TopSideButtons />}>
+            <TitleCard title="Current Users" topMargin="mt-2" TopSideButtons={<TopSideButtons />}>
 
                 {/* Leads List in table format loaded from slice after api call */}
             <div className="overflow-x-auto w-full">

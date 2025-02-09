@@ -12,7 +12,7 @@ const TopSideButtons = ({removeFilter, applyFilter, applySearch}) => {
 
     const [filterParam, setFilterParam] = useState("")
     const [searchText, setSearchText] = useState("")
-    const locationFilters = ["Paris", "London", "Canada", "Peru", "Tokyo"]
+    const locationFilters = ["Shivajinagar", "Wakad", "Pimpri-Chinchwad", "Viman Nagar", "Balewadi"]
 
     const showFiltersAndApply = (params) => {
         applyFilter(params)
@@ -77,7 +77,7 @@ function Transactions(){
     return(
         <>
             
-            <TitleCard title="Recent Transactions" topMargin="mt-2" TopSideButtons={<TopSideButtons applySearch={applySearch} applyFilter={applyFilter} removeFilter={removeFilter}/>}>
+            <TitleCard title="Current Users" topMargin="mt-2" TopSideButtons={<TopSideButtons applySearch={applySearch} applyFilter={applyFilter} removeFilter={removeFilter}/>}>
 
                 {/* Team Member list in table format loaded constant */}
             <div className="overflow-x-auto w-full">
@@ -110,7 +110,7 @@ function Transactions(){
                                     </td>
                                     <td>{l.email}</td>
                                     <td>{l.location}</td>
-                                    <td>${l.amount}</td>
+                                    <td>₹{l.amount}</td>
                                     <td>{moment(l.date).format("D MMM")}</td>
                                     </tr>
                                 )

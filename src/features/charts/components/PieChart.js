@@ -56,7 +56,7 @@ import {
         };
   
       return(
-          <TitleCard title={"Orders by country"}>
+          <TitleCard title={"Orders by Areas"}>
                   <Pie options={options} data={data} />
           </TitleCard>
       )
